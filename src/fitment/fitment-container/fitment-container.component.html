@@ -1,0 +1,9 @@
+<button (click)="getYears()"> Select vehicle </button>
+
+
+<div *ngFor="let year of years$ | async">
+  <a (click)="getVehicleMake(year)"> {{ year }} </a>
+</div>
+<div *ngFor="let make of makes$ | async">
+  <a (click)="getVehicleModel(selectedYear, make)"> {{ make }} </a>
+</div>
